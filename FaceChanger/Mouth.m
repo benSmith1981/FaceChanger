@@ -11,10 +11,10 @@
 
 @implementation Mouth
 
-- (UIView*)drawFaceFeatures:(NSArray*)features onCanvas:(UIView*)canvas withFeatureName:(NSString*)featureName andFeatureType:(int)typeOfFeature
-{
-    return nil;
-}
+//- (UIView*)drawFaceFeatures:(NSArray*)features onCanvas:(UIView*)canvas withFeatureName:(NSString*)featureName andFeatureType:(int)typeOfFeature
+//{
+//    return nil;
+//}
 
 -(void)featureButtonPressed{
     NSLog(@"Feature button pressed");

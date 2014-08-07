@@ -24,7 +24,10 @@ typedef enum {
 @interface FaceFeature : UIView <UIGestureRecognizerDelegate>
 
 -(void)createGestureRecognisers;
-- (UIView*)drawFaceFeatures:(NSArray*)features onCanvas:(UIView*)canvas withFeatureName:(NSString*)featureName andFeatureType:(int)typeOfFeature;
+- (UIView*)drawFaceFeatures:(NSArray*)features
+                   onCanvas:(UIView*)canvas
+            withFeatureName:(NSString*)featureName
+             andFeatureType:(FeatureType)typeOfFeature;
 
 @end
 

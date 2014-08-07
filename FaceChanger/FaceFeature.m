@@ -41,10 +41,17 @@
 //    return self;
 //}
 
-- (UIView*)drawFaceFeatures:(NSArray*)features onCanvas:(UIView*)canvas withFeatureName:(NSString*)featureName andFeatureType:(int)typeOfFeature
+- (UIView*)drawFaceFeatures:(NSArray*)features
+                   onCanvas:(UIView*)canvas
+            withFeatureName:(NSString*)featureName
+             andFeatureType:(FeatureType)typeOfFeature
 {
     NSLog(@"Name %@",[NSString stringWithFormat:@"%@%i.png",featureName,typeOfFeature]);
-    UIImageView *faceFeatureImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@%i.png",featureName,typeOfFeature]]];
+    UIImageView *faceFeatureImageView = [[UIImageView alloc]initWithImage:
+                                         [UIImage imageNamed:[NSString
+                                                              stringWithFormat:@"%@%i.png",
+                                                              featureName,
+                                                              typeOfFeature]]];
 
     // CoreImage coordinate system origin is at the bottom left corner and UIKit's
     // is at the top left corner. So we need to translate features positions before
@@ -87,7 +94,7 @@
             case mouth:
                 if (feature.hasMouthPosition)
                 {
-                    
+                    [faceFeatureImageView setCenter:CGPointMake(mouthPoint.x,mouthPoint.y)];
                 }
                 break;
             default:
@@ -98,12 +105,12 @@
     NSLog(@"%f %f",faceFeatureImageView.frame.origin.x,faceFeatureImageView.frame.origin.y);
     
     CGPoint temp = CGPointApplyAffineTransform(CGPointMake(faceFeatureImageView.frame.origin.x,faceFeatureImageView.frame.origin.y),transform);
-    
+    [self createGestureRecognisers];
     self.frame = CGRectMake(temp.x, temp.y, faceFeatureImageView.frame.size.width, faceFeatureImageView.frame.size.height);
     self.userInteractionEnabled = YES;
+    canvas.userInteractionEnabled = YES;
     faceFeatureImageView.userInteractionEnabled = YES;
-    [self addSubview:faceFeatureImageView];
-    [self createGestureRecognisers];
+    [canvas addSubview:faceFeatureImageView];
     return self;
 }
 
