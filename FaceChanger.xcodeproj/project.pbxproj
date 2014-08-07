@@ -24,7 +24,7 @@
 		0FAF95F81699F9F400FCB8FC /* FaceFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF95F51699F9F400FCB8FC /* FaceFeature.m */; };
 		0FAF95F91699F9F400FCB8FC /* faceFeatureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF95F71699F9F400FCB8FC /* faceFeatureFactory.m */; };
 		0FAF95FE1699FA7F00FCB8FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAF95FD1699FA7F00FCB8FC /* QuartzCore.framework */; };
-		0FAF9633169A346800FCB8FC /* face.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF9632169A346800FCB8FC /* face.jpg */; };
+		0FAF9633169A346800FCB8FC /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF9632169A346800FCB8FC /* face.png */; };
 		B504C8F416A3472000B2FCE1 /* MainScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B504C8F216A3472000B2FCE1 /* MainScreen.m */; };
 		B504C8F516A3472000B2FCE1 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B504C8F316A3472000B2FCE1 /* MainScreen.xib */; };
 		B504C8F916A36C8500B2FCE1 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B504C8F816A36C8400B2FCE1 /* CameraVC.m */; };
@@ -100,7 +100,7 @@
 		0FAF95F61699F9F400FCB8FC /* faceFeatureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faceFeatureFactory.h; sourceTree = "<group>"; };
 		0FAF95F71699F9F400FCB8FC /* faceFeatureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faceFeatureFactory.m; sourceTree = "<group>"; };
 		0FAF95FD1699FA7F00FCB8FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0FAF9632169A346800FCB8FC /* face.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face.jpg; sourceTree = "<group>"; };
+		0FAF9632169A346800FCB8FC /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
 		0FAF9634169A359700FCB8FC /* UIImage+ImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageProcessing.h"; sourceTree = "<group>"; };
 		B504C8F216A3472000B2FCE1 /* MainScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreen.m; sourceTree = "<group>"; };
 		B504C8F316A3472000B2FCE1 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B5267EDC16BEBFFA00A421F9 /* Face Parts */,
-				0FAF9632169A346800FCB8FC /* face.jpg */,
+				0FAF9632169A346800FCB8FC /* face.png */,
 				0FAF95D21699F97400FCB8FC /* FaceChanger-Info.plist */,
 				B5E144D316E3C303002A7C2F /* main.m */,
 				B5E144D516E3C315002A7C2F /* FaceChanger-Prefix.pch */,
@@ -417,7 +417,7 @@
 				0FAF95E11699F97400FCB8FC /* Default-568h@2x.png in Resources */,
 				0FAF95E71699F97400FCB8FC /* FaceFeatureVC.xib in Resources */,
 				0FAF95EA1699F97400FCB8FC /* FaceFeatureVC_iPad.xib in Resources */,
-				0FAF9633169A346800FCB8FC /* face.jpg in Resources */,
+				0FAF9633169A346800FCB8FC /* face.png in Resources */,
 				B504C8F516A3472000B2FCE1 /* MainScreen.xib in Resources */,
 				B5267F0416BEBFFA00A421F9 /* eyeBackDrop.png in Resources */,
 				B5267F0516BEBFFA00A421F9 /* LeftEye0.png in Resources */,

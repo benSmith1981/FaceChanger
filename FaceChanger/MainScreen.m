@@ -39,7 +39,7 @@
 - (IBAction)ScanFace:(id)sender {
     FaceFeatureVC *faceVC = [[FaceFeatureVC alloc]initWithNibName:@"FaceFeatureVC" bundle:nil];
     faceVC.view.frame = self.view.frame;
-    faceVC.faceImageToScan = [UIImage imageNamed:@"face.jpg"];
+    faceVC.faceImageToScan = [UIImage imageNamed:@"face.png"];
     [self presentViewController:faceVC animated:YES completion:nil];
 }
 

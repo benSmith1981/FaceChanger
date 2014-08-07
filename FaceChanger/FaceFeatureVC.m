@@ -49,7 +49,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveImagefeatures:) name:@"featuresNotification" object:nil];
     
     //Calls category on UIImage used to process the face image to detect features
-    [[UIImage imageNamed:@"face.jpg"] processFace];
+    [[UIImage imageNamed:@"face.png"] processFace];
     
     NSLog(@"%f",_canvas.frame.size.height+_canvas.frame.origin.y);
     ScrollContainer *scrollContainer = [[ScrollContainer alloc]initWithFrame:CGRectMake(0,_canvas.bounds.size.height, self.view.frame.size.width, 50)];
@@ -64,7 +64,7 @@
     [[_scrollMenus objectAtIndex:0]addButtonWithCallback:[_FaceFeatures objectAtIndex:0]];
     [[_scrollMenus objectAtIndex:0]addButtonWithCallback:[_FaceFeatures objectAtIndex:0]];
     [[_scrollMenus objectAtIndex:0]addButtonWithCallback:[_FaceFeatures objectAtIndex:0]];
-    [[_scrollMenus objectAtIndex:0]addButtonWithCallback:[_FaceFeatures objectAtIndex:0]];
+//    [[_scrollMenus objectAtIndex:0]addButtonWithCallback:[_FaceFeatures objectAtIndex:0]];
 
     [scrollContainer addSubview:[_scrollMenus objectAtIndex:0]];
     [self.view addSubview:scrollContainer];
@@ -93,9 +93,43 @@
     
     for (int i = 0; i < totalTypes; i++)
     {
+        NSLog(@"%@",[_FaceFeatures objectAtIndex:i]);
         //set frame of sharer button
-        [_canvas addSubview:[[_FaceFeatures objectAtIndex:0] drawFaceFeatures:(NSArray*)features onCanvas:_canvas withFeatureName:@"LeftEye" andFeatureType:0]];
+        switch (i) {
+            case leftEye:
+                [_canvas addSubview:[[_FaceFeatures objectAtIndex:i]
+                                     drawFaceFeatures:(NSArray*)features
+                                     onCanvas:_canvas
+                                     withFeatureName:@"LeftEye"
+                                     andFeatureType:leftEye]];
+                break;
+            case rightEye:
+                [_canvas addSubview:[[_FaceFeatures objectAtIndex:i]
+                                     drawFaceFeatures:(NSArray*)features
+                                     onCanvas:_canvas
+                                     withFeatureName:@"RightEye"
+                                     andFeatureType:rightEye]];
+                break;
+            case mouth:
+                [_canvas addSubview:[[_FaceFeatures objectAtIndex:i]
+                                     drawFaceFeatures:(NSArray*)features
+                                     onCanvas:_canvas
+                                     withFeatureName:@"Mouth"
+                                     andFeatureType:mouth]];
+                break;
+            case scar:
+                [_canvas addSubview:[[_FaceFeatures objectAtIndex:i]
+                                     drawFaceFeatures:(NSArray*)features
+                                     onCanvas:_canvas
+                                     withFeatureName:@"Scar"
+                                     andFeatureType:scar]];
+                break;
+            default:
+                break;
+        }
+
     }
+    [_canvas setNeedsDisplay];
 }
 
 @end
